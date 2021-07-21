@@ -1,0 +1,13 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    dummy0:
+      addresses:
+      - 10.0.0.1/24
+  vlans:
+    dummy0.100:
+      id: 100
+      link: dummy0
+      addresses:
+      - 10.0.100.1/24
